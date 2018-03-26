@@ -21,13 +21,6 @@ export class HomePageComponent {
         }
     ];
 
-    providers: any[] = [
-        {
-            title: 'Api',
-            description: 'Communicates with your api.'
-        }
-    ];
-
     constructor(private navCtrl: NavController) {}
 
     goToComponentsPage(component: any): void {
