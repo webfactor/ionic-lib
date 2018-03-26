@@ -10,8 +10,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ```  
 Shows the app version. 🎉
 
+### wf-status-message
 ```
-<wf-status-message [icon?]="pizza">
+<wf-status-message icon?="pizza">
     Content here. 👋
 </wf-status-message>
 ```
