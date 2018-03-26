@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>wfm-ionic-lib ❤️</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item-divider>
+            Providers
+        </ion-item-divider>
+        <ion-item *ngFor="let provider of providers" (click)="goToProvidersPage(provider)" text-wrap>
+            {{ provider.title }}
+            <p *ngIf="provider.description">{{ provider.description }}</p>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item-divider>
+            Components
+        </ion-item-divider>
+        <ion-item *ngFor="let component of components" (click)="goToComponentsPage(component)" text-wrap>
+            {{ component.title }}
+            <p *ngIf="component.description">{{ component.description }}</p>
+        </ion-item>
+    </ion-list>
+</ion-content>

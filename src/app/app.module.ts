@@ -7,9 +7,11 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { WfmIonicLibModule } from '../lib';
 import { Api } from '../lib/src/lib.module';
 import { AppComponent } from './app.component';
+import { ComponentsPageComponent } from './pages/components/components.page';
+import { HomePageComponent } from './pages/home/home.page';
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, HomePageComponent, ComponentsPageComponent],
     imports: [
         BrowserModule,
         WfmIonicLibModule,
@@ -18,6 +20,6 @@ import { AppComponent } from './app.component';
     ],
     providers: [AppVersion, Api, HttpClient],
     bootstrap: [IonicApp],
-    entryComponents: [AppComponent]
+    entryComponents: [AppComponent, HomePageComponent, ComponentsPageComponent]
 })
 export class AppModule {}

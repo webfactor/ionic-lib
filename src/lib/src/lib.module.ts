@@ -10,10 +10,13 @@ export * from './components/status-message/status-message';
 export * from './components/app-version/app-version';
 export * from './providers/api';
 
+const components = [StatusMessageComponent, AppVersionComponent];
+
 @NgModule({
     imports: [CommonModule, IonicModule],
-    declarations: [StatusMessageComponent, AppVersionComponent],
-    exports: [StatusMessageComponent, AppVersionComponent]
+    declarations: components,
+    entryComponents: components,
+    exports: components
 })
 export class WfmIonicLibModule {
     static forRoot(): ModuleWithProviders {

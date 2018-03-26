@@ -11,6 +11,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Api
 
+Communicates with your api.
+
 ```
 setBaseUrl(baseUrl: string): void
 ```

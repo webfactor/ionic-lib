@@ -1,16 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Api } from '../lib/src/lib.module';
+import { NavController, Nav } from 'ionic-angular';
+import { ComponentsPageComponent } from './pages/components/components.page';
+import { HomePageComponent } from './pages/home/home.page';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'ion-app',
+    template: '<ion-nav [root]="rootPage"></ion-nav>'
 })
 export class AppComponent {
-    constructor(private api: Api) {
-        this.api.setBaseUrl('http://persofleet.webfactormedia.de/api/v1/');
-        this.api.get('bla').subscribe(res => {
-            console.log(res);            
-        });
-    }
+    rootPage: any = HomePageComponent;
 }

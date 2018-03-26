@@ -5,7 +5,13 @@
     </ion-card-header>
 
     <ion-card-content padding>
-        <ng-content></ng-content>
+        <div #ref>
+            <ng-content></ng-content>
+        </div>
+
+        <span *ngIf="!ref.innerHTML.trim()">
+            Some text here. 👋
+        </span>
     </ion-card-content>
 
 </ion-card>
