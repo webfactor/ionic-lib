@@ -1,1 +1,1 @@
-export { SampleModule } from './sample.module';
+export { WfmIonicLibModule } from './lib.module';

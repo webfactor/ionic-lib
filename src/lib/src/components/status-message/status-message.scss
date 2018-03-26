@@ -1,0 +1,15 @@
+@import "node_modules/ionic-angular/themes/ionic.theme.default";
+
+.card {
+    box-shadow: none;
+    background: none;
+}
+
+.card-content {
+    padding-top: 0px;
+    font-size: 1.3em;
+}
+
+ion-icon {
+    font-size: 4em;
+}
