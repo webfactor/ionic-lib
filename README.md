@@ -45,8 +45,6 @@ Shows the app version. 🎉
 
 Shows a nice message with an icon to be used in an `<ion-list>`.
 
----
-
 ## Dev stuff
 
 ### Development server
