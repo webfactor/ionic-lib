@@ -1,0 +1,21 @@
+{
+  "name": "wfm-ionic-lib",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "url"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "main": "./bundles/wfm-ionic-lib.umd.js",
+  "es2015": "./esm2015/wfm-ionic-lib.js",
+  "module": "./esm5/wfm-ionic-lib.es5.js",
+  "typings": "./wfm-ionic-lib.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^5.0.0",
+    "@angular/common": "^5.0.0",
+    "@angular/http": "^5.0.0"
+  }
+}
