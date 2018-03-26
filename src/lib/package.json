@@ -1,21 +1,27 @@
 {
-  "name": "wfm-ionic-lib",
-  "version": "0.1.0",
-  "repository": {
-    "type": "git",
-    "url": "url"
-  },
-  "keywords": [
-    "angular"
-  ],
-  "license": "MIT",
-  "main": "./bundles/wfm-ionic-lib.umd.js",
-  "es2015": "./esm2015/wfm-ionic-lib.js",
-  "module": "./esm5/wfm-ionic-lib.es5.js",
-  "typings": "./wfm-ionic-lib.d.ts",
-  "peerDependencies": {
-    "@angular/core": "^5.0.0",
-    "@angular/common": "^5.0.0",
-    "@angular/http": "^5.0.0"
-  }
+    "name": "wfm-ionic-lib",
+    "version": "0.1.3",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/webfactor/ionic-lib"
+    },
+    "author": {
+        "name": "Christian Kasperbauer",
+        "email": "christian.kasperbauer@webfactor.de"
+    },
+    "bugs": {
+        "url": "https://github.com/webfactor/ionic-lib/issues"
+    },
+    "keywords": ["angular"],
+    "license": "MIT",
+    "main": "./bundles/wfm-ionic-lib.umd.js",
+    "es2015": "./esm2015/wfm-ionic-lib.js",
+    "module": "./esm5/wfm-ionic-lib.es5.js",
+    "typings": "./wfm-ionic-lib.d.ts",
+    "peerDependencies": {
+        "ionic-angular": "~3.9.2",
+        "@ionic-native/core": "^4.6.0",
+        "@ionic-native/app-version": "^4.6.0",
+        "cordova-plugin-app-version": "^0.1.9"
+    }
 }
