@@ -6,10 +6,6 @@ import { StatusMessageComponent } from './components/status-message/status-messa
 import { AppVersionComponent } from './components/app-version/app-version';
 import { Api } from './providers/api';
 
-export * from './components/status-message/status-message';
-export * from './components/app-version/app-version';
-export * from './providers/api';
-
 const components = [StatusMessageComponent, AppVersionComponent];
 
 @NgModule({

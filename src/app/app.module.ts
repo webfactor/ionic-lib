@@ -5,7 +5,6 @@ import { AppVersion } from '@ionic-native/app-version';
 import { IonicApp, IonicModule } from 'ionic-angular';
 
 import { WfmIonicLibModule } from '../lib';
-import { Api } from '../lib/src/lib.module';
 import { AppComponent } from './app.component';
 import { ComponentsPageComponent } from './pages/components/components.page';
 import { HomePageComponent } from './pages/home/home.page';
@@ -18,7 +17,7 @@ import { HomePageComponent } from './pages/home/home.page';
         IonicModule.forRoot(AppComponent),
         HttpClientModule
     ],
-    providers: [AppVersion, Api, HttpClient],
+    providers: [AppVersion, HttpClient],
     bootstrap: [IonicApp],
     entryComponents: [AppComponent, HomePageComponent, ComponentsPageComponent]
 })

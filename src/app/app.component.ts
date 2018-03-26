@@ -1,5 +1,4 @@
 import { Component, ViewChild } from '@angular/core';
-import { Api } from '../lib/src/lib.module';
 import { NavController, Nav } from 'ionic-angular';
 import { ComponentsPageComponent } from './pages/components/components.page';
 import { HomePageComponent } from './pages/home/home.page';

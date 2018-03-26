@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { ComponentsPageComponent } from '../components/components.page';
-import { AppVersionComponent, StatusMessageComponent } from '../../../lib/src/lib.module';
+import { AppVersionComponent, StatusMessageComponent } from '../../../lib';
 
 @Component({
     templateUrl: './home.page.html'
