@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class Api {
-    protected baseUrl: string = 'https://webfactormedia.de/api/v1/';
+    protected baseUrl: string = '';
 
     constructor(protected http: HttpClient) {}
 
