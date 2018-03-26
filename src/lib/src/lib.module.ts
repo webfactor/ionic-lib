@@ -4,9 +4,11 @@ import { IonicModule } from 'ionic-angular';
 
 import { StatusMessageComponent } from './components/status-message/status-message';
 import { AppVersionComponent } from './components/app-version/app-version';
+import { Api } from './providers/api';
 
 export * from './components/status-message/status-message';
 export * from './components/app-version/app-version';
+export * from './providers/api';
 
 @NgModule({
     imports: [CommonModule, IonicModule],
@@ -18,7 +20,7 @@ export class WfmIonicLibModule {
         return {
             ngModule: WfmIonicLibModule,
             providers: [
-                // SampleService
+                Api
             ]
         };
     }
