@@ -5,6 +5,8 @@ import { IonicModule } from 'ionic-angular';
 import { StatusMessageComponent } from './components/status-message/status-message';
 import { AppVersionComponent } from './components/app-version/app-version';
 import { Api } from './providers/api';
+import { AppRateServiceProvider } from './providers/app-rate-service';
+
 
 const components = [StatusMessageComponent, AppVersionComponent];
 
@@ -19,7 +21,8 @@ export class WfmIonicLibModule {
         return {
             ngModule: WfmIonicLibModule,
             providers: [
-                Api
+                Api,
+                AppRateServiceProvider,
             ]
         };
     }

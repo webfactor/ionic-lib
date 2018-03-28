@@ -10,6 +10,8 @@ const rollupGlobals = {
 
     'ionic-angular': 'ionic-angular',
     '@ionic-native/app-version': '@ionic-native/app-version',
+    '@ionic/storage': '@ionic/storage',
+    '@ionic-native/in-app-browser':'@ionic-native/in-app-browser',
     // add globals / unresolved imports here
 
     'd3': 'd3',
