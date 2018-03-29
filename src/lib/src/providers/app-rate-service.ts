@@ -8,10 +8,10 @@ export class AppRateServiceProvider {
     appStarts = 0;
     threshold: number = 5;
     storeIds: any = {
-        ios: '%APPSTORE_ID%',
-        android: 'de.webfactor.jumpin'
+        ios: '',
+        android: ''
     };
-    appName = 'JumpIn';
+    appName = '';
     dialog: any = {
         title: `Bewerte ${this.appName}`,
         message:
@@ -86,9 +86,11 @@ export class AppRateServiceProvider {
         this.inAppBrowser.create(encodeURI(url), '_system');
     }
 
-    setAppName(appName: string): void{
-        this.appName = appName
+    public setAppName(appName :string) :void {
+        this.appName = appName;
     }
+
+
 
 
 }
