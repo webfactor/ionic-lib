@@ -1,8 +1,11 @@
+import { AppRateServiceProvider } from './../../../lib/src/providers/app-rate-service';
+import { Api } from './../../../lib/src/providers/api';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { ComponentsPageComponent } from '../components/components.page';
 import { AppVersionComponent, StatusMessageComponent } from '../../../lib';
+
 
 @Component({
     templateUrl: './home.page.html'
@@ -21,11 +24,12 @@ export class HomePageComponent {
         }
     ];
 
+
     constructor(private navCtrl: NavController) {}
 
     goToComponentsPage(component: any): void {
         this.navCtrl.push(ComponentsPageComponent, { component });
     }
 
-    goToProvidersPage(provider: any): void {}
+
 }
