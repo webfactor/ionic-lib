@@ -1,3 +1,4 @@
+import { Storage } from '@ionic/storage';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,7 +18,7 @@ import { HomePageComponent } from './pages/home/home.page';
         IonicModule.forRoot(AppComponent),
         HttpClientModule
     ],
-    providers: [AppVersion, HttpClient],
+    providers: [AppVersion, HttpClient, Storage],
     bootstrap: [IonicApp],
     entryComponents: [AppComponent, HomePageComponent, ComponentsPageComponent]
 })
