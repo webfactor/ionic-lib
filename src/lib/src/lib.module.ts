@@ -6,12 +6,13 @@ import { StatusMessageComponent } from './components/status-message/status-messa
 import { AppVersionComponent } from './components/app-version/app-version';
 import { Api } from './providers/api';
 import { AppRateServiceProvider } from './providers/app-rate-service';
+import { IonicStorageModule } from '@ionic/storage';
 
 
 const components = [StatusMessageComponent, AppVersionComponent];
 
 @NgModule({
-    imports: [CommonModule, IonicModule],
+    imports: [CommonModule, IonicModule, IonicStorageModule.forRoot(),],
     declarations: components,
     entryComponents: components,
     exports: components
