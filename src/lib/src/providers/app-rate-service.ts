@@ -85,4 +85,10 @@ export class AppRateServiceProvider {
 
         this.inAppBrowser.create(encodeURI(url), '_system');
     }
+
+    setAppName(appName: string): void{
+        this.appName = appName
+    }
+
+
 }
