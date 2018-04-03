@@ -3,8 +3,7 @@ import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angu
 @Component({
     selector: 'wf-scrollable-list',
     templateUrl: 'scrollable-list.html',
-    styleUrls: ['scrollable-list.scss'],
-    encapsulation: ViewEncapsulation.Emulated
+    styleUrls: ['scrollable-list.scss']
 })
 export class ScrollableListComponent {
     @Input() items: any[] = [];
