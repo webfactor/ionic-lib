@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angu
 export class ScrollableListComponent {
     @Input() items: any[] = [];
     @Input() display: string = 'card';
-    @Input() color: 'default' | 'primary' | 'secondary' | 'danger' | 'light' | 'dark' = 'light';
+    @Input() color: string = 'light';
     @Output() itemClick: EventEmitter<any> = new EventEmitter();
 
     getImage(item: any): string {
