@@ -2,6 +2,9 @@
     <ion-navbar color="primary">
         <ion-title>{{ component?.title }}</ion-title>
     </ion-navbar>
+    <ion-toolbar color="primary">
+        <wf-scrollable-list [items]="items" (itemClick)="onItemClick($event)" display="chip" color="light"></wf-scrollable-list>        
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
@@ -22,5 +25,5 @@
             Chips:
         </ion-item-divider>
     </ion-list>
-    <wf-scrollable-list [items]="items" (itemClick)="onItemClick($event)" display="chip"></wf-scrollable-list>
+    <wf-scrollable-list [items]="items" (itemClick)="onItemClick($event)" display="chip" color="primary"></wf-scrollable-list>
 </ion-content>
