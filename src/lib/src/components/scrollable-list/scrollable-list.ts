@@ -7,7 +7,6 @@ import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angu
 })
 export class ScrollableListComponent {
     @Input() items: any[] = [];
-    @Input() color: string = '';
     @Output() itemClick: EventEmitter<any> = new EventEmitter();
 
     getImage(item: any): string {
