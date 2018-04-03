@@ -7,10 +7,15 @@ import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angu
 })
 export class ScrollableListComponent {
     @Input() items: any[] = [];
+    @Input() display: string = 'card';
     @Output() itemClick: EventEmitter<any> = new EventEmitter();
 
     getImage(item: any): string {
         return item.imageUrl || null;
+    }
+
+    getIcon(item: any): string {
+        return item.icon || null;
     }
 
     onItemClick(item: any): void {

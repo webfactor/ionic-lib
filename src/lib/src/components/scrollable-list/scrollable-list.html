@@ -1,10 +1,23 @@
-<ion-list class="scrollable" no-margin>
-    <ion-item *ngIf="items?.length" no-margin>
-        <ion-card *ngFor="let item of items" (click)="onItemClick(item)">
-            <img [src]="getImage(item)" />
-            <ion-card-content>
-                {{ item.title }}
-            </ion-card-content>
-        </ion-card>
-    </ion-item>
-</ion-list>
+<ng-container *ngIf="items?.length">
+    <ion-list class="scrollable" no-margin>
+        <ion-item no-margin>
+            <ng-content></ng-content>
+            <ng-container *ngFor="let item of items">
+                <ion-card (click)="onItemClick(item)" *ngIf="display == 'card'">
+                    <img [src]="getImage(item)" *ngIf="getImage(item)">
+                    <ion-card-content>
+                        {{ item.title }}
+                    </ion-card-content>
+                </ion-card>
+                
+                <ion-chip (click)="onItemClick(item)" color="default" *ngIf="display == 'chip'">
+                    <ion-avatar *ngIf="getImage(item)">
+                        <img [src]="getImage(item)">
+                    </ion-avatar>
+                    <ion-icon [name]="getIcon(item)" *ngIf="getIcon(item)"></ion-icon>
+                    {{ item.title }}
+                </ion-chip>
+            </ng-container>
+        </ion-item>
+    </ion-list>
+</ng-container>
