@@ -10,7 +10,7 @@ export class ScrollableListPage {
         { title: 'Kitty 1', imageUrl: 'http://placekitten.com/g/101/101' },
         { title: 'Kitty 2', imageUrl: 'http://placekitten.com/g/102/102' },
         { title: 'Kitty 3', imageUrl: 'http://placekitten.com/g/103/103' },
-        { title: 'Kitty 4', icon: 'logo-octocat' },
+        { title: 'Kitty 4', imageUrl: 'http://placekitten.com/g/104/104' },
         { title: 'Kitty 5', imageUrl: 'http://placekitten.com/g/105/105' },
         { title: 'Kitty 6', imageUrl: 'http://placekitten.com/g/106/106' },
         { title: 'Kitty 7', imageUrl: 'http://placekitten.com/g/107/107' },

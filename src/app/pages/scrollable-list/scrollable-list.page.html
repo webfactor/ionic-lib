@@ -12,8 +12,15 @@
     </ion-list>
     <ion-list>
         <ion-item-divider>
-            Preview:
+            Cards:
         </ion-item-divider>
     </ion-list>
     <wf-scrollable-list [items]="items" (itemClick)="onItemClick($event)"></wf-scrollable-list>
+
+    <ion-list>
+        <ion-item-divider>
+            Chips:
+        </ion-item-divider>
+    </ion-list>
+    <wf-scrollable-list [items]="items" (itemClick)="onItemClick($event)" display="chip"></wf-scrollable-list>
 </ion-content>
