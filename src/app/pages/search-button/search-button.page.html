@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>SearchButton</ion-title>
+        <ion-buttons end>
+            <button ion-button clear icon-only wf-search (search)="onSearch($event)">
+                <ion-icon name="search"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item text-wrap *ngIf="component?.description">
+            {{ component?.description }}
+        </ion-item>
+        <ion-item text-wrap *ngIf="component?.body">
+            {{ component?.body }}
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item-divider>
+            Preview:
+        </ion-item-divider>
+        <div text-center>
+            <button ion-button icon-left color="primary" wf-search (search)="onSearch($event)">
+                <ion-icon name="search"></ion-icon>
+                Suchen nach...
+            </button>
+        </div>
+    </ion-list>
+</ion-content>
