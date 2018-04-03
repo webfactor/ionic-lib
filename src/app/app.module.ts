@@ -6,11 +6,12 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 
 import { WfmIonicLibModule } from '../lib';
 import { AppComponent } from './app.component';
-import { ComponentsPageComponent } from './pages/components/components.page';
-import { HomePageComponent } from './pages/home/home.page';
+import { ComponentsPage } from './pages/components/components.page';
+import { HomePage } from './pages/home/home.page';
+import { ScrollableListPage } from './pages/scrollable-list/scrollable-list.page';
 
 @NgModule({
-    declarations: [AppComponent, HomePageComponent, ComponentsPageComponent],
+    declarations: [AppComponent, HomePage, ComponentsPage, ScrollableListPage],
     imports: [
         BrowserModule,
         WfmIonicLibModule,
@@ -19,6 +20,6 @@ import { HomePageComponent } from './pages/home/home.page';
     ],
     providers: [AppVersion, HttpClient],
     bootstrap: [IonicApp],
-    entryComponents: [AppComponent, HomePageComponent, ComponentsPageComponent]
+    entryComponents: [AppComponent, HomePage, ComponentsPage, ScrollableListPage]
 })
 export class AppModule {}

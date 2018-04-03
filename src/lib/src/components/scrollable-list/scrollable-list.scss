@@ -1,0 +1,40 @@
+@import 'node_modules/ionic-angular/themes/ionic.theme.default';
+
+.scrollable {
+    ::ng-deep {
+        .item-inner,
+        .label,
+        .item {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        .label {
+            overflow-x: scroll;
+            padding-right: 10px;
+        }
+    }
+
+    .card {
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        width: calc(20vw);
+        max-width: 90px;
+        margin: 5px;
+        white-space: normal;
+
+        &:first-child {
+            margin-left: 10px;
+        }
+
+        &:last-child {
+            margin-right: 10px;
+        }
+
+        &-content {
+            padding: 3px;
+            hyphens: auto;
+        }
+    }
+}

@@ -15,7 +15,20 @@
     </ion-list>
     <ion-list>
         <ion-item-divider>
+            I/O:
+        </ion-item-divider>
+        <ion-item text-wrap>
+            items: {{ '{' }} title: string, imageUrl: string {{ '}' }}[]
+        </ion-item>
+        <ion-item text-wrap>
+            (itemClick)
+            <p>Returns the clicked item in $event param.</p>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item-divider>
             Preview:
         </ion-item-divider>
     </ion-list>
+    <wf-scrollable-list [items]="items" (itemClick)="onItemClick($event)"></wf-scrollable-list>
 </ion-content>
