@@ -14,7 +14,7 @@ export class AlertService {
         return this.translate.get('global').toPromise();
     }
 
-    async confirm(title: string, message: string, options?: any): Promise<any> {
+    async confirm(message: string, title: string = null, subTitle: string = null): Promise<any> {
         this.translations = await this.getTranslations();
 
         return new Promise((resolve, reject) => {
@@ -38,7 +38,7 @@ export class AlertService {
         });
     }
 
-    async show(title: string, message: string, options?: any): Promise<any> {
+    async show(message: string, title: string = null, subTitle: string = null): Promise<any> {
         this.translations = await this.getTranslations();
 
         return new Promise((resolve, reject) => {
