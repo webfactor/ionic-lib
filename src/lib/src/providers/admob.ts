@@ -83,9 +83,12 @@ export class AdmobService {
         return this.admobFree.banner.remove();
     }
 
-    async prepareInterstitial(): Promise<any> {
+    async prepareInterstitial(autoShow: boolean = false, isTesting: boolean = false): Promise<any> {
         let isReady = await this.admobFree.interstitial.isReady();
         if (isReady) return Promise.resolve();
+
+        this.interstitialConfig.autoShow = autoShow;
+        this.interstitialConfig.isTesting = isTesting;
 
         this.admobFree.interstitial.config(this.interstitialConfig);
         return this.admobFree.interstitial.prepare();
