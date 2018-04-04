@@ -10,7 +10,7 @@ export class AlertService {
 
     constructor(private alertCtrl: AlertController, protected translate: TranslateService) {}
 
-    getTranslations(): Promise<any> {
+    private getTranslations(): Promise<any> {
         return this.translate.get('global').toPromise();
     }
 
