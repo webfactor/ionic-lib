@@ -8,16 +8,15 @@ export class AlertService {
     ok: string = 'OK';
     cancel: string = 'Abbrechen';
 
-    constructor(private alertCtrl: AlertController, protected translate: TranslateService) {
-        this.translate.get('global').subscribe(
-            translations => {
-                this.translations = translations;
-            },
-            err => console.log(err)
-        );
+    constructor(private alertCtrl: AlertController, protected translate: TranslateService) {}
+
+    getTranslations(): Promise<any> {
+        return this.translate.get('global').toPromise();
     }
 
-    confirm(title: string, message: string, options?: any): Promise<any> {
+    async confirm(title: string, message: string, options?: any): Promise<any> {
+        this.translations = await this.getTranslations();
+
         return new Promise((resolve, reject) => {
             let options = {
                 title,
@@ -39,7 +38,9 @@ export class AlertService {
         });
     }
 
-    show(title: string, message: string, options?: any): Promise<any> {
+    async show(title: string, message: string, options?: any): Promise<any> {
+        this.translations = await this.getTranslations();
+
         return new Promise((resolve, reject) => {
             let options = {
                 title,
