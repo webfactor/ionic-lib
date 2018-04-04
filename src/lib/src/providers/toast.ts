@@ -5,12 +5,12 @@ import { ToastController } from 'ionic-angular';
 export class ToastService {
     constructor(public toast: ToastController) {}
 
-    presentShort(message: string, position: 'top' | 'middle' | 'bottom' = 'bottom') {
-        this.presentWithOptions(message, position);
+    presentShort(message: string, position: 'top' | 'middle' | 'bottom' = 'bottom'): Promise<any> {
+        return this.presentWithOptions(message, position);
     }
 
-    presentLong(message: string, position: 'top' | 'middle' | 'bottom' = 'bottom') {
-        this.presentWithOptions(message, position, 5000);
+    presentLong(message: string, position: 'top' | 'middle' | 'bottom' = 'bottom'): Promise<any> {
+        return this.presentWithOptions(message, position, 5000);
     }
 
     presentWithOptions(
@@ -19,7 +19,7 @@ export class ToastService {
         duration: number = 2500,
         showCloseButton: boolean = false,
         closeButtonText: string = 'OK'
-    ) {
+    ): Promise<any> {
         let toast = this.toast.create({
             message,
             duration,
@@ -27,6 +27,6 @@ export class ToastService {
             showCloseButton,
             closeButtonText
         });
-        toast.present();
+        return toast.present();
     }
 }
