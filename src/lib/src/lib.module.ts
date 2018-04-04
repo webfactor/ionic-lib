@@ -4,6 +4,7 @@ import { IonicModule } from 'ionic-angular';
 
 import { AppVersionComponent } from './components/app-version/app-version';
 import { StatusMessageComponent } from './components/status-message/status-message';
+import { AlertService } from './providers/alert';
 import { Api } from './providers/api';
 import { ToastService } from './providers/toast';
 
@@ -19,7 +20,7 @@ export class WfmIonicLibModule {
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: WfmIonicLibModule,
-            providers: [Api, ToastService]
+            providers: [Api, ToastService, AlertService]
         };
     }
 }
