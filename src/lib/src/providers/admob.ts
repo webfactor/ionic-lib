@@ -8,26 +8,26 @@ import { Platform } from 'ionic-angular';
 
 @Injectable()
 export class AdmobService {
-    bannerIds: { android: string; ios: string } = {
+    private bannerIds: { android: string; ios: string } = {
         // admob test ids
         android: 'ca-app-pub-3940256099942544/6300978111',
         ios: 'ca-app-pub-3940256099942544/6300978111'
     };
 
-    interstitialIds: { android: string; ios: string } = {
+    private interstitialIds: { android: string; ios: string } = {
         // admob test ids
         android: 'ca-app-pub-3940256099942544/1033173712',
         ios: 'ca-app-pub-3940256099942544/1033173712'
     };
 
-    bannerConfig: AdMobFreeBannerConfig = {
+    private bannerConfig: AdMobFreeBannerConfig = {
         id: null,
         isTesting: false,
         autoShow: false,
         bannerAtTop: false
     };
 
-    interstitialConfig: AdMobFreeInterstitialConfig = {
+    private interstitialConfig: AdMobFreeInterstitialConfig = {
         id: null,
         isTesting: false,
         autoShow: false
