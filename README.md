@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Development server
 
-Prerequisites: Install angular-cli (`npm i @angular/cli`) globally.
+Prerequisites: Install angular-cli (`npm i -g @angular/cli`) globally.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
