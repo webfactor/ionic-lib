@@ -17,7 +17,7 @@ import { PrivacyModalPage } from '../pages/privacy-modal/privacy-modal.page';
 export class PrivacyService {
     private readonly storageKey: string = 'privacyConfirmedAt';
     private url: string = '';
-    private document: { body: string; updatedAt: string } = null;
+    private document: { title: string, body: string; updatedAt: string } = null;
 
     constructor(
         private storage: Storage,
@@ -39,7 +39,7 @@ export class PrivacyService {
         } finally {
             this.document = await this.getContent();
             if (!lastConfirmation || moment(this.document.updatedAt).isAfter(lastConfirmation)) {
-                if (autoConfirm) return this.presentConfirmationModal();
+                if (autoConfirm) return this.presentConfirmationDialog();
                 return Promise.resolve();
             }
 
@@ -76,7 +76,7 @@ export class PrivacyService {
         return documents.find(doc => doc.type == 'privacy');
     }
 
-    async presentConfirmationModal(): Promise<any> {
+    async presentConfirmationDialog(): Promise<any> {
         if (!this.document) this.document = await this.getContent();
 
         return new Promise((resolve, reject) => {
