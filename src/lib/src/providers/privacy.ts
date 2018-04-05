@@ -16,7 +16,7 @@ import { PrivacyModalPage } from '../pages/privacy-modal/privacy-modal.page';
 
 @Injectable()
 export class PrivacyService {
-    private readonly storageKey: string = 'privacyConfirmationDate';
+    private readonly storageKey: string = 'privacyConfirmedAt';
     private url: string = '';
     private document: { body: string; updatedAt: string } = null;
 
