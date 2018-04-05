@@ -76,7 +76,9 @@ export class PrivacyService {
         return documents.find(doc => doc.type == 'privacy');
     }
 
-    presentConfirmationModal(): Promise<any> {
+    async presentConfirmationModal(): Promise<any> {
+        if (!this.document) this.document = await this.getContent();
+
         return new Promise((resolve, reject) => {
             let modal = this.modalCtrl.create(PrivacyModalPage, {
                 document: this.document,
