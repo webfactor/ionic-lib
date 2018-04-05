@@ -11,7 +11,6 @@ import { PrivacyModalPage } from '../pages/privacy-modal/privacy-modal.page';
  * - Verwurstung mit DocumentService
  * --> Markdown
  * --> Mehrsprachigkeit
- * - Android Back Button verhindern
  */
 
 @Injectable()
