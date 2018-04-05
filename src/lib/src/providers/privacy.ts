@@ -29,7 +29,7 @@ export class PrivacyService {
         this.url = url;
     }
 
-    async checkForPrivacyUpdates(): Promise<any> {
+    async checkForPrivacyUpdates(autoConfirm: boolean = true): Promise<any> {
         let lastConfirmation: moment.Moment;
 
         try {
@@ -39,10 +39,11 @@ export class PrivacyService {
         } finally {
             this.document = await this.getContent();
             if (!lastConfirmation || moment(this.document.updatedAt).isAfter(lastConfirmation)) {
-                return this.presentConfirmationModal();
+                if (autoConfirm) return this.presentConfirmationModal();
+                return Promise.resolve();
             }
 
-            return Promise.resolve();
+            return Promise.reject(null);
         }
     }
 
