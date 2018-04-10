@@ -8,7 +8,9 @@ import { StatusMessageComponent } from './components/status-message/status-messa
 import { SearchButtonDirective } from './directives/search-button';
 import { SearchModalPage } from './pages/search-modal/search-modal';
 import { AdmobService } from './providers/admob';
+import { AlertService } from './providers/alert';
 import { Api } from './providers/api';
+import { ToastService } from './providers/toast';
 
 const pages = [SearchModalPage];
 const components = [StatusMessageComponent, AppVersionComponent, ScrollableListComponent];
@@ -24,7 +26,7 @@ export class WfmIonicLibModule {
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: WfmIonicLibModule,
-            providers: [Api, AdmobService]
+            providers: [Api, ToastService, AlertService, AdmobService]
         };
     }
 }
