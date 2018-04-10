@@ -12,7 +12,7 @@ import { NavParams, Content } from 'ionic-angular';
 @Component({
     templateUrl: './components.page.html'
 })
-export class ComponentsPageComponent implements AfterViewInit {
+export class ComponentsPage implements AfterViewInit {
     component: any = {};
 
     @ViewChild(Content) content: Content;

@@ -4,13 +4,10 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
     <ion-list>
         <ion-item text-wrap *ngIf="component?.description">
             {{ component?.description }}
-        </ion-item>
-        <ion-item text-wrap *ngIf="component?.body">
-            {{ component?.body }}
         </ion-item>
     </ion-list>
     <ion-list>

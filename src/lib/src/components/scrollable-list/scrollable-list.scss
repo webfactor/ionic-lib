@@ -1,0 +1,47 @@
+@import 'node_modules/ionic-angular/themes/ionic.theme.default';
+
+.scrollable {
+    ::ng-deep {
+        .item-inner,
+        .label,
+        .item {
+            margin: 0 !important;
+            padding: 0 !important;
+            background: transparent;
+        }
+
+        .label {
+            overflow-x: scroll;
+            padding: 0 10px !important;
+        }
+    }
+
+
+    .card {
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        width: calc(20vw);
+        max-width: 90px;
+        margin: 5px;
+        white-space: normal;
+
+        &-content {
+            padding: 3px;
+            hyphens: auto;
+        }
+    }
+
+    ::ng-deep .chip {
+        padding-right: 10px;
+
+        ion-icon {
+            margin-right: 8px;
+        }
+
+        ion-avatar img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

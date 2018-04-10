@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>{{ component?.title }}</ion-title>
+    </ion-navbar>
+    <ion-toolbar color="primary">
+        <wf-scrollable-list [items]="items" (itemClick)="onItemClick($event)" display="chip" color="light"></wf-scrollable-list>        
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item text-wrap *ngIf="component?.description">
+            {{ component?.description }}
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item-divider>
+            Cards:
+        </ion-item-divider>
+    </ion-list>
+    <wf-scrollable-list [items]="items" (itemClick)="onItemClick($event)"></wf-scrollable-list>
+
+    <ion-list>
+        <ion-item-divider>
+            Chips:
+        </ion-item-divider>
+    </ion-list>
+    <wf-scrollable-list [items]="items" (itemClick)="onItemClick($event)" display="chip" color="primary"></wf-scrollable-list>
+</ion-content>
