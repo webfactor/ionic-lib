@@ -6,13 +6,15 @@ import { AppVersionComponent } from './components/app-version/app-version';
 import { ScrollableListComponent } from './components/scrollable-list/scrollable-list';
 import { StatusMessageComponent } from './components/status-message/status-message';
 import { SearchButtonDirective } from './directives/search-button';
+import { PrivacyModalPage } from './pages/privacy-modal/privacy-modal.page';
 import { SearchModalPage } from './pages/search-modal/search-modal';
 import { AdmobService } from './providers/admob';
 import { AlertService } from './providers/alert';
 import { Api } from './providers/api';
+import { PrivacyService } from './providers/privacy';
 import { ToastService } from './providers/toast';
 
-const pages = [SearchModalPage];
+const pages = [SearchModalPage, PrivacyModalPage];
 const components = [StatusMessageComponent, AppVersionComponent, ScrollableListComponent];
 const directives = [SearchButtonDirective];
 
@@ -26,7 +28,7 @@ export class WfmIonicLibModule {
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: WfmIonicLibModule,
-            providers: [Api, ToastService, AlertService, AdmobService]
+            providers: [Api, ToastService, AlertService, AdmobService, PrivacyService]
         };
     }
 }
