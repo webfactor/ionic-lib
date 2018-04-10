@@ -5,3 +5,5 @@ export * from './components/status-message/status-message';
 export * from './components/scrollable-list/scrollable-list';
 
 export * from './providers/api';
+
+export * from './pages/translatable';
