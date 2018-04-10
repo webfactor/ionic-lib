@@ -10,6 +10,7 @@ const rollupGlobals = {
 
     'ionic-angular': 'ionic-angular',
     '@ionic-native/app-version': '@ionic-native/app-version',
+    '@ionic-native/admob-free': '@ionic-native/admob-free',
     // add globals / unresolved imports here
 
     'd3': 'd3',

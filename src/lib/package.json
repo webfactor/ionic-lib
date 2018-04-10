@@ -19,10 +19,12 @@
     "module": "./esm5/wfm-ionic-lib.es5.js",
     "typings": "./wfm-ionic-lib.d.ts",
     "peerDependencies": {
+        "@ionic-native/admob-free": "^4.6.0",
         "@ionic-native/app-version": "^4.6.0",
         "@ionic-native/core": "^4.6.0",
         "@ionic/storage": "^2.1.3",
         "cordova-plugin-app-version": "^0.1.9",
-        "ionic-angular": "~3.9.2"
+        "ionic-angular": "~3.9.2",
+        "lycwed-cordova-plugin-admob-free": "https://github.com/webfactor/lycwed-cordova-plugin-admob-free.git"        
     }
 }
