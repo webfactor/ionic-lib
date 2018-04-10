@@ -7,3 +7,6 @@ export * from './components/scrollable-list/scrollable-list';
 export * from './providers/api';
 
 export * from './pages/translatable';
+
+export * from './directives/search-button';
+export * from './pages/search-modal/search-modal';

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { ComponentsPage } from '../components/components.page';
 import { AppVersionComponent, StatusMessageComponent } from '../../../lib';
+import { ComponentsPage } from '../components/components.page';
 import { ScrollableListPage } from '../scrollable-list/scrollable-list.page';
+import { SearchButtonPage } from '../search-button/search-button.page';
 
 @Component({
     templateUrl: './home.page.html'
@@ -23,8 +24,13 @@ export class HomePage {
         {
             title: 'ScrollableList',
             description: 'Shows horizontal scrollable list items',
-            component: StatusMessageComponent,
+            component: null,
             page: ScrollableListPage
+        },
+        {
+            title: 'Search Directive',
+            description: 'Adds search functionality w/ history to any button.',
+            page: SearchButtonPage
         }
     ];
 
